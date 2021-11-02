@@ -1,13 +1,13 @@
 pegawai = [
 #   [Nama, Agama , Gaji pokok, Jumlah Anak]    
     ['Ahmad', 'Islam', 4000000, 2],
-    ['Alex', 'Kristen', 6000000, 5],
-    ['Hasan', 'Islam', 8000000, 0]
+    ['ALex', 'Kristen Protestan', 6000000, 5],
+    ['Hasan', 'ISLAM', 8000000, 0]
 ]
 
 for x in pegawai:
-    nama = x[0]
-    agama = x[1]
+    nama = x[0].capitalize()
+    agama = x[1].capitalize()
     gaji_pokok = x[2]
     jumlah_anak = x[3]
     tunjangan_jabatan = gaji_pokok * (20/100)
@@ -31,6 +31,6 @@ for x in pegawai:
     print("Tunjangan Keluarga \t : Rp.", tunjangan_keluarga)
     print("Gaji Kotor \t \t : Rp.", gaji_kotor)
     print("Zakat Profesi \t \t : Rp.", zakat_profesi)
-    print("Gaji Bersih \t \t : Rp.", gaji_bersih)
+    print("Take Home Pay \t \t : Rp.", gaji_bersih)
     print(" ")
     
