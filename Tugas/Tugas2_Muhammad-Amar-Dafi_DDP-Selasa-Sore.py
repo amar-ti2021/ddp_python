@@ -99,7 +99,7 @@ print("\n===================================================")
 print("Nama Pelanggan \t\t: ", customer_name)
 print("Produk yang dibeli")
 for key, value in selected_products.items():
-    if " " not in key:
+    if len(key) < 5:
         key = key + "\t"
     print(f"=> {key} \tx {value[0]}\t: Rp. {value[1]}")
 print("===================================================")
