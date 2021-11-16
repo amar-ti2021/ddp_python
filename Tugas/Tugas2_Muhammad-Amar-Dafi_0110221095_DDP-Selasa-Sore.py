@@ -36,10 +36,10 @@ while areThereMore == True:
         key = "Kulkas"
     else:
         print("Pilihan Invalid")
-        break
+        continue
     
     if key in selected_products:
-        print(f"Anda telah membeli {key} sebanyak {selected_products[key]} ingin mengubah?")
+        print(f"Anda telah membeli {key} sebanyak {selected_products[key][0]} ingin mengubah?")
         print("[1] Menambahkan")
         print("[2] Mengurangi")
         mod_selection = int(input("Pilihan : "))
@@ -53,12 +53,12 @@ while areThereMore == True:
             selected_products[key][1] = selected_products[key][0] * price_list[key]
             if amount > selected_products[key][0]:
                 print("Invalid input")
-                break
+                continue
             selected_products[key][0] = selected_products[key][0] - amount
             selected_products[key][1] = selected_products[key][0] * price_list[key]
         else:
             print("Invalid Input")
-            break
+            continue
 
     else:
         print(f"Masukkan jumlah {key} yang ingin dibeli")
