@@ -12,7 +12,7 @@ price_list = {
 # Variable to store customer's selected products 
 selected_products = {}
 
-# Grab customer's seleted products
+# Grab customer's selected products
 areThereMore = True
 while areThereMore == True:
     print("\n===================================================")
@@ -49,7 +49,9 @@ while areThereMore == True:
             selected_products[key][1] = selected_products[key][0] * price_list[key]
         elif mod_selection == 2:
             amount = int(input("Jumlah yang ingin dikurangi : "))
-            if amount > selected_products[key]:
+            selected_products[key][0] = selected_products[key][0] - amount
+            selected_products[key][1] = selected_products[key][0] * price_list[key]
+            if amount > selected_products[key][0]:
                 print("Invalid input")
                 break
             selected_products[key][0] = selected_products[key][0] - amount
